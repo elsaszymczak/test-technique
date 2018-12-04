@@ -1,0 +1,59 @@
+BACKEND - Programming
+These can be done in any language you're comfortable with
+
+1. Give a regular expression that detects hexadecimal numbers in a text.
+For example, ‘0x0f4’, ‘0acdadecf822eeff32aca5830e438cb54aa722e3’, ‘8BADF00D’ should be detected.
+
+> programming.rb (ex1)
+
+2.Here is the pseudo code of a function that is defined recursively:
+-  f(0) = 1;
+-  f(1) = 3;
+-  f(n)= 3 * f(n-1) - f(n-2);
+Provide an implementation for ‘f’. Bonus points for a non recursive implementation.
+
+> programming.rb (ex2)
+
+BACKEND - MySQL
+
+1. Write a CREATE TABLE query for a table storing information on users. It will store:
+  - id,
+  - firstname,
+  - lastname,
+  - gender,
+  - email,
+  - created_at
+
+> mysql.sql (ex1)
+
+2. Write a query on the previous table that lists the 10 most recently added users.
+
+> mysql.sql (ex2)
+
+GENERAL - Creativity
+Si vous êtes Français, vous pouvez répondre en Français.
+
+1. Describe the color yellow to someone who is blind
+
+>
+
+The color yellow is warm and comforting. Like the first days of spring when you feel the sun heating your skin. Or on a very cold winter night, when you feel the heat of the open fire warming you up. Yellow is also used to translate joy and happiness. Yellow is also the color of a baby chick, very soft and mellow.
+
+3. Describe the data model you’d use for a Battleship game. What are the key objects? How will your code use them?
+
+>
+For this exercise we create a data model for one battleship game.
+The key objects are the ships, the players and the hits.
+
+Each ship has an id, a type (carrier, battleship, cruiser, submarine, destroyer), a length, a position on the x axis, a position on the y axis, a status(alive, touched, sunk) and a player id.
+Each player has an id, a name and a number of ships.
+Each hit has an id, a player id, a position x and a position y.
+
+A ship belongs to a player
+
+A player has many ships
+
+A hit belongs to a player
+
+
+When the game begins every hits will update the status of the ships, if the position of the hit matches the position of a boat, it will be touched, otherwise the status of the ship will remain unchanged.
